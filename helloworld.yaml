@@ -1,6 +1,6 @@
 - name: helloworld
   hosts: local
-  connections: local #no passwd and username
+  connection: local #no passwd and username
   tasks:
   - name: printing helloworld
     ansible.builtin.debug:
