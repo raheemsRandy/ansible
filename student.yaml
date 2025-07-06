@@ -1,0 +1,21 @@
+- name: sivakumar
+  lastname: Reddy
+  email: info@deops
+  address:
+  - type: perm
+    doorno: 143
+    street: nampalli
+  - type: temp
+    doorno: 143
+    street: kukatpalli
+
+- name: sivakumar1
+  lastname: Reddy
+  email: info@deops
+  address:
+  - type: perm
+    doorno: 143
+    street: nampalli
+  - type: temp
+    doorno: 143
+    street: kukatpalli
