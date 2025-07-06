@@ -12,5 +12,5 @@
 
   tasks:
   - name: Checking user details
-    ansible.builtin.prompt:
+    ansible.builtin.debug:
       msg: "user: {{username}} pass: {{password}}"
