@@ -1,6 +1,6 @@
 - name: variables
   hosts: local
-  connections: local
+  connection: local
   vars: 
     Course: Ansible
     Duration: 120H
