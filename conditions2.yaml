@@ -1,0 +1,14 @@
+- name: playbook console using ansible facts
+  hosts: frontend
+  become: yes
+  tasks:
+  - name:  
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+    when: ansible_os_family == "RedHat"
+  - name:  
+    ansible.builtin.apt:
+      name: nginx
+      state: present
+    when: ansible_os_family == "Debian"
