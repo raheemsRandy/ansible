@@ -4,6 +4,7 @@
   vars_prompt:
     name: number
     prompt: please enter any number
+    private: false
   tasks:
   - name: checking number less than 100 or not
     when: number | int < 100
