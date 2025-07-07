@@ -6,10 +6,10 @@
     prompt: please enter any number
   tasks:
   - name: checking number less than 100 or not
-    when: number < 100
+    when: number | int < 100
     ansible.builtin.debug:
       msg: "{{number}} is less than 100"
 
-    when: number > 100
+    when: number | > int 100
     ansible.builtin.debug:
       msg: "{{number}} is greater than 100"
