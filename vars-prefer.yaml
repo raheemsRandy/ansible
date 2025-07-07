@@ -1,7 +1,7 @@
 - name: Checking the vars preference
   hosts: frontend
   vars:
-    Greeting: "From file"
+    Greeting: "From play"
   vars_files:
   - course.yaml
   # vars_prompt:
