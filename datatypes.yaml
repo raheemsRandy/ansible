@@ -1,0 +1,19 @@
+- name: Types of data Types
+  hosts: local
+  connection: local
+  vars: 
+    Course: "Devops with Aws"
+    Duration: 120
+    is_live: true
+    Tools:
+    - linux
+    - shell
+    - ansible
+    - terraform
+    Concepts:
+      CI: jenkins
+      Scripting: shell,ansible
+  tasks: 
+  - name: printing course info with datatypes
+    ansible.builtin.debug:
+      msg: "{{Course}} {{Duration}} {{is_live}} {{Tools}} {{Concepts}}"
