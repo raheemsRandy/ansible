@@ -11,7 +11,11 @@
   
   tasks:
   - name: checking the preference of vars
-    vars:
-      Greeting: "Hello from task"
+    # vars:
+    #   Greeting: "Hello from task"
     ansible.builtin.debug:
       msg: "Greeting is {{Greeting}}"
+
+  #1. cmd line
+  #2.task
+  #3.
