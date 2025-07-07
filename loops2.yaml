@@ -2,11 +2,11 @@
   hosts: local
   connection: local
   tasks:
-  - name: installing {{item}}
+  - name: installing 
     ansible.builtin.debug:
       msg: "Hello {{item}}"
     loop:
-    - nginx
-    - mysql
-    - zip
+    - {name: 'nginx', state: 'present'}
+    - {name: 'mysql', state: 'absent'}
+    - {name: 'zip', state: 'absent'}
     
