@@ -3,8 +3,9 @@
   connection: local
   tasks:
   - name: installing 
-    ansible.builtin.dnf:
-      msg: "Hello {{item}}"
+    ansible.builtin.package:
+      name: "Hello {{item.name}}"
+      state: "{{item.state}}"
     loop:
     - {name: 'nginx', state: 'present'}
     - {name: 'mysql', state: 'absent'}
