@@ -2,12 +2,12 @@
   hosts: frontend
   become: yes
   tasks:
-  - name:  
+  - name:  redhat
     ansible.builtin.dnf:
       name: nginx
       state: present
     when: ansible_os_family == "RedHat"
-  - name:  
+  - name:  debian
     ansible.builtin.apt:
       name: nginx
       state: present
