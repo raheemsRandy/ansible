@@ -4,10 +4,10 @@
     Greeting: "From file"
   vars_files:
   - course.yaml
-  vars_prompt:
-  - name: Greeting
-    prompt: Please enter the Greeting
-    private: false
+  # vars_prompt:
+  # - name: Greeting
+  #   prompt: Please enter the Greeting
+  #   private: false
   
   tasks:
   - name: checking the preference of vars
