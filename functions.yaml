@@ -20,3 +20,12 @@
         trainer: sivakumar
     ansible.builtin.debug:
       msg: "course info: {{ course | dict2items }}"
+
+  - name: convert list to map
+    vars:
+      course:
+        - ansible
+        - 10HR
+        - sivakumar
+    ansible.builtin.debug:
+      msg: "course info: {{ course | items2dict }}"
