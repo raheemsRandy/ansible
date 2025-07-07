@@ -1,15 +1,17 @@
 - name: Checking the vars preference
   hosts: frontend
   vars:
-  - Course: Robotics
+    Greeting: "From file"
   vars_file:
   - course.yaml
   vars_prompt:
-  - name: Course
-    prompt: Please enter the course
+  - name: Greeting
+    prompt: Please enter the Greeting
+    private:false
   
   tasks:
   - name: checking the preference of vars
-    Course: Automobile
+    vars:
+      Greeting "Hello from task"
     ansible.builtin.debug:
-      msg: "Course is {{Course}}"
+      msg: "Course is {{Greeting}}"
