@@ -2,13 +2,13 @@
   hosts: local
   connection: local
   vars:
-    number: 234
+    number: 23
     
   tasks:
   - name: checking number less than 100 or not
     ansible.builtin.debug:
       msg: "{{number}} is less than 100"
-    when: number  < 100
+    when: number < 100
     
   
   - name: checking number greater than 100 or not
