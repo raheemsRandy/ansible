@@ -1,0 +1,15 @@
+- name: Checking the vars preference
+  hosts: frontend
+  vars:
+  - Course: Robotics
+  vars_file:
+  - course.yaml
+  vars_prompt:
+  - name: Course
+    prompt: Please enter the course
+  
+  tasks:
+  - name: checking the preference of vars
+    Course: Automobile
+    ansible.builtin.debug:
+      msg: "Course is {{Course}}"
