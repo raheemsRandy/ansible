@@ -1,0 +1,12 @@
+- name: loops
+  hosts: local
+  connection: local
+  tasks:
+  - name: installing {{item}}
+    ansible.builtin.debug:
+      msg: "Hello {{item}}"
+    loop:
+    - nginx
+    - mysql
+    - zip
+    
