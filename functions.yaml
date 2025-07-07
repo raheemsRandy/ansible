@@ -35,3 +35,9 @@
       name: "Shaik Raheem"
     ansible.builtin.debug:
       msg: "{{name | upper }}"
+
+  - name: checking ip address
+    vars:
+      ip: "300.900.89.890"
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipaddr }}"
