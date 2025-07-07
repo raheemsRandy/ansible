@@ -2,7 +2,7 @@
   hosts: frontend
   vars:
     Greeting: "From file"
-  vars_file:
+  vars_files:
   - course.yaml
   vars_prompt:
   - name: Greeting
